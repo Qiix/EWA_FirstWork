@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.FXMLAjoutController">
+   <children>
+      <Label layoutX="29.0" layoutY="95.0" text="Nom adhérant :">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></Label>
+      <Label layoutX="31.0" layoutY="157.0" text="Nom emprunt :">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></Label>
+      <Label layoutX="28.0" layoutY="228.0" text="Date debut">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="296.0" text="Date de fin :">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="comclient" layoutX="300.0" layoutY="89.0" prefWidth="150.0" />
+      <TextField fx:id="tfnom" layoutX="268.0" layoutY="160.0" />
+      <TextField fx:id="tfDeb" layoutX="268.0" layoutY="222.0" />
+      <TextField fx:id="tfFin" layoutX="268.0" layoutY="290.0" />
+      <Button layoutX="384.0" layoutY="340.0" mnemonicParsing="false" onAction="#AjouterEmprunt" style="-fx-background-color: #008000;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="clear" layoutX="300.0" layoutY="340.0" mnemonicParsing="false" onAction="#onclearaction" style="-fx-background-color: #ff0000;" text="Effacer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="237.0" layoutY="30.0" text="Ajouter emprunt" textOverrun="CLIP">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
