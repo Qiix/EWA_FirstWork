@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="868.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.FXMLDocumentController">
+   <children>
+      <TableView fx:id="listCompte" layoutX="34.0" layoutY="74.0" onSort="#afficheListeClient" prefHeight="357.0" prefWidth="570.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="46.0" text="ID" />
+            <TableColumn fx:id="nom" prefWidth="127.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="109.0" text="Prénom" />
+            <TableColumn fx:id="email" prefWidth="191.0" text="Email" />
+            <TableColumn fx:id="cin" minWidth="0.0" prefWidth="96.0" text="CIN" />
+         </columns>
+      </TableView>
+      <Button layoutX="229.0" layoutY="446.0" mnemonicParsing="false" onAction="#AjoutClient" style="-fx-background-color: #32cd32;" text="Ajouter" textFill="WHITE" />
+      <Button layoutX="351.0" layoutY="446.0" mnemonicParsing="false" onAction="#supprimeClient" style="-fx-background-color: #f80909;" text="Supprimer" textFill="WHITE" />
+      <TextField fx:id="search" layoutX="347.0" layoutY="29.0" />
+      <Button layoutX="506.0" layoutY="29.0" mnemonicParsing="false" onAction="#rechercheCompte" text="Rechercher" />
+      <Button layoutX="287.0" layoutY="446.0" mnemonicParsing="false" onAction="#modifClient" style="-fx-background-color: #DAA520;" text="Modifier" textFill="WHITE" />
+      <Label layoutX="17.0" layoutY="13.0" text="Gérer les comptes" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNom" layoutX="689.0" layoutY="168.0" />
+      <TextField fx:id="tfCin" layoutX="689.0" layoutY="288.0" />
+      <TextField fx:id="tfPrenom" layoutX="689.0" layoutY="209.0" />
+      <TextField fx:id="tfEmail" layoutX="689.0" layoutY="249.0" />
+      <Label fx:id="labelNom" layoutX="645.0" layoutY="172.0" text="Nom" textFill="WHITE" />
+      <Label fx:id="labelEmail" layoutX="645.0" layoutY="253.0" text="Email" textFill="WHITE" />
+      <Label fx:id="labelPrenom" layoutX="638.0" layoutY="213.0" text="Prénom" textFill="WHITE" />
+      <Label fx:id="labelCin" layoutX="650.0" layoutY="290.0" text="CIN" textFill="WHITE" />
+      <Button layoutX="774.0" layoutY="330.0" mnemonicParsing="false" onAction="#validerModif" style="-fx-background-color: #32cd32;" text="Valider" textFill="WHITE" />
+      <Button layoutX="689.0" layoutY="446.0" mnemonicParsing="false" onAction="#validerProfil" text="Valider les profils" />
+      <Button layoutX="717.0" layoutY="330.0" mnemonicParsing="false" onAction="#viderChamps" text="Effacer" />
+   </children>
+</AnchorPane>

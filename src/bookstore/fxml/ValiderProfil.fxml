@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #20120f;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="bookstore.controllers.ValiderProfilController">
+   <children>
+      <TableView layoutX="64.0" layoutY="107.0" prefHeight="200.0" prefWidth="485.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="233.0" text="Lien" />
+            <TableColumn minWidth="0.0" prefWidth="176.0" text="Valider" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
