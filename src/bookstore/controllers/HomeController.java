@@ -73,7 +73,7 @@ public class HomeController implements Initializable {
            // loadStage("/bookstore/fxml/GUIOuvrages.fxml");
             System.out.println("ouvrages window");
         } else if (mouseEvent.getSource() == btnEmpreintes) {
-           // loadStage("/bookstore/fxml/GUIEmpreintes.fxml");
+            loadStage("../fxml/FXMLDocument.fxml");
             System.out.println("Empreintes window");
         } else if (mouseEvent.getSource() == btnLivraisons) {
             loadStage("../fxml/LivraisonGUI.fxml");
