@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNCarousel?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="548.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.ClientGui">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GNCarousel fx:id="carousel" layoutX="69.0" layoutY="54.0" prefHeight="391.0" prefWidth="476.0" />
+               </children></AnchorPane>
+         </center>
+         <left>
+            <AnchorPane prefHeight="499.0" prefWidth="166.0" style="-fx-background-color: #67a195" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="1.0" layoutY="45.0" prefHeight="148.0" prefWidth="127.0" style="-fx-spacing: 5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <JFXButton prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: white;" text="Acceuil" textFill="#fc6565">
+                           <graphic>
+                              <FontAwesomeIconView fill="#fc6565" glyphName="HOME" size="24" />
+                           </graphic></JFXButton>
+                        <JFXButton prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: white;" text="Profil" textFill="#fc6565">
+                           <graphic>
+                              <FontAwesomeIconView fill="#fc6565" glyphName="USER" size="24" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: white;" text="Dashboard" textFill="#fc6565">
+                           <graphic>
+                              <FontAwesomeIconView fill="#fc6565" glyphName="PIE_CHART" size="24" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton prefHeight="37.0" prefWidth="199.0" style="-fx-background-color: white;" text="Commandes" textFill="#fc6565">
+                           <graphic>
+                              <FontAwesomeIconView fill="#fc6565" glyphName="HISTORY" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <Label prefHeight="17.0" prefWidth="200.0" text="Client" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="49.0" prefWidth="741.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="showCartBtn" layoutX="670.0" layoutY="8.0" onAction="#showCart" text=" " textFill="#fc6565">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fc6565" glyphName="SHOPPING_CART" onDragDetected="#showCart" size="24" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+  -base    : #2BBBAD;
+  -hover   : -light-gray;
+  -pressed : -base;
+.spinner {
+  -fx-border-color : -default-border;
+  -fx-background-color : transparent;
+  -fx-text-fill : -default-border;
+}
+
+.spinner:focused {
+  -fx-border-color : -base;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button
+ {
+  -fx-background-color : transparent;
+  -fx-background-insets : 0px;
+  /* -fx-padding : 0px; */
+}
+
+.spinner .increment-arrow-button {
+  -fx-border-width : 0px 0px 1px 1px;
+}
+
+.spinner .decrement-arrow-button {
+  -fx-border-width : 0px 0px 0px 1px;
+}
