@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNCarousel?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane onDragDetected="#cancel" prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.CheckoutGui">
+   <children>
+      <Pane layoutX="181.0" layoutY="288.0">
+         <children>
+            <JFXTextField fx:id="phoneTF" focusColor="#0cae3a" labelFloat="true" layoutX="40.0" prefHeight="25.0" prefWidth="199.0" promptText="+216" unFocusColor="#228033" />
+            <FontAwesomeIconView fill="#0cae3a" glyphName="PHONE" layoutX="5.0" layoutY="23.0" size="18" wrappingWidth="18.142857551574707" />
+         </children>
+      </Pane>
+      <GNCarousel fx:id="carousel" autoRide="true" layoutX="35.0" layoutY="62.0" prefHeight="105.0" prefWidth="542.0" transitionDuration="500.0ms" />
+      <Label layoutX="258.0" layoutY="32.0" text="Vous allez acheter" />
+      <JFXButton fx:id="confirmBtn" buttonType="RAISED" layoutX="229.0" layoutY="340.0" text="Confirmer commande" textFill="#0cae3a" onAction="#sendSms">
+         <graphic>
+            <FontAwesomeIconView fill="#0cae3a" glyphName="CHECK" size="18" />
+         </graphic>
+      </JFXButton>
+      <JFXProgressBar layoutX="206.0" layoutY="221.0" prefHeight="18.0" />
+      <Pane layoutX="121.0" layoutY="239.0" prefHeight="34.0" prefWidth="185.0">
+         <children>
+            <JFXCheckBox indeterminate="true" layoutX="55.0" layoutY="10.0" prefHeight="18.0" prefWidth="96.0" selected="true" text="à la boutique" textFill="#0cae3a" />
+            <FontAwesomeIconView fill="#0cae3a" glyphName="TRUCK" layoutX="14.0" layoutY="25.0" size="18" />
+         </children>
+      </Pane>
+      <Pane layoutX="306.0" layoutY="239.0" prefHeight="34.0" prefWidth="185.0">
+         <children>
+            <JFXCheckBox indeterminate="true" layoutX="55.0" layoutY="10.0" prefHeight="18.0" prefWidth="96.0" selected="true" text="sur place" textFill="#0cae3a" />
+            <FontAwesomeIconView fill="#0cae3a" glyphName="CREDIT_CARD" layoutX="14.0" layoutY="25.0" size="18" />
+         </children>
+      </Pane>
+      <Label layoutX="206.0" layoutY="179.0" text="Total:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" layoutX="277.0" layoutY="179.0" text="0 TND">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="cancelBtn" buttonType="RAISED" layoutX="260.0" layoutY="367.0" text="Annuler" onAction="#cancel" textFill="#ad0c0c">
+         <graphic>
+            <FontAwesomeIconView fill="#ad0c0c" glyphName="CLOSE" size="18" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

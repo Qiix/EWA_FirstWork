@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="565.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.OuvrageGuiController">
+   <children>
+      <TableView fx:id="table" layoutX="48.0" layoutY="110.0" prefHeight="392.0" prefWidth="842.0" stylesheets="@TableView.css" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="110.0">
+        <columns>
+          <TableColumn fx:id="col_intitule" prefWidth="161.99999237060547" text="Intitulé" />
+            <TableColumn fx:id="col_isbn" prefWidth="71.66667175292969" text="ISBN" />
+          <TableColumn fx:id="col_auteur" prefWidth="138.3333282470703" text="Auteur" />
+            <TableColumn fx:id="col_dateSortie" minWidth="5.666656494140625" prefWidth="99.33334350585938" text="Date de Sortie" />
+            <TableColumn fx:id="col_prix" prefWidth="78.6666259765625" text="Prix" />
+            <TableColumn fx:id="col_type" prefWidth="77.66668701171875" text="Type" />
+            <TableColumn fx:id="col_btns" prefWidth="190.0" text="" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

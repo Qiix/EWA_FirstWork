@@ -1,77 +1,67 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bookstore.Entities;
 
 import java.util.Date;
 
-/**
- *
- * @author i__t__s
- */
 public class Commande {
-    private int id;
-    private String creation_date;
-    private String description;
-    private String status;
+    private String idCommande;
+    private Date dateCommande;
+    private float prixCommande;
+    private String adresseCommande;
 
-    public Commande(int id, String creation_date, String description, String status) {
-        this.id = id;
-        this.creation_date = creation_date;
-        this.description = description;
-        this.status = status;
+    public Commande(String idCommande, Date dateCommande, float prixCommande, String adresseCommande) {
+        this.idCommande = idCommande;
+        this.dateCommande = dateCommande;
+        this.prixCommande = prixCommande;
+        this.adresseCommande = adresseCommande;
     }
 
-    public Commande() {
+    public Commande(String idCommande, float prixCommande, String adresseCommande) {
+
+        this.idCommande = idCommande;
+        this.dateCommande = new Date(System.currentTimeMillis());
+        this.prixCommande = prixCommande;
+        this.adresseCommande = adresseCommande;
     }
 
-    public Commande(String description, String status) {
-        this.description = description;
-        this.status = status;
+    public String getIdCommande() {
+        return idCommande;
     }
 
-    public Commande(String description) {
-        this.description = description;
+    public Date getDateCommande() {
+        return dateCommande;
     }
 
-    public int getId() {
-        return id;
+    public float getPrixCommande() {
+        return prixCommande;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getAdresseCommande() {
+        return adresseCommande;
     }
 
-    public String getCreation_date() {
-        return creation_date;
+    public void setIdCommande(String idCommande) {
+        this.idCommande = idCommande;
     }
 
-    public void setCreation_date(String creation_date) {
-        this.creation_date = creation_date;
+    public void setDateCommande(Date dateCommande) {
+        this.dateCommande = dateCommande;
     }
 
-    public String getDescription() {
-        return description;
+    public void setPrixCommande(float prixCommande) {
+        this.prixCommande = prixCommande;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setAdresseCommande(String adresseCommande) {
+        this.adresseCommande = adresseCommande;
     }
 
     @Override
     public String toString() {
-        return "Commande{" + "id=" + id + ", creation_date=" + creation_date + ", description=" + description + ", status=" + status + '}';
+        return "Commande{" +
+                "idCommande='" + idCommande + '\'' +
+                ", dateCommande=" + dateCommande +
+                ", prixCommande=" + prixCommande +
+                ", adresseCommande='" + adresseCommande + '\'' +
+                '}';
     }
-    
-    
 }
