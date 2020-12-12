@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e7e7e7;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bookstore.controllers.DemandeventeController">
+   <children>
+      <JFXTextField fx:id="isbn" layoutX="199.0" layoutY="77.0" promptText="ISBN" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="intitule" layoutX="199.0" layoutY="128.0" promptText="INTITULE" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="auteur" layoutX="199.0" layoutY="228.0" promptText="AUTEUR" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="dates" layoutX="199.0" layoutY="175.0" promptText="DATE SORTIE" unFocusColor="#25c5b3" />
+      <Button fx:id="envoie" layoutX="199.0" layoutY="311.0" mnemonicParsing="false" onAction="#envoievente" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #25c5b3;" text="ENVOYER">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

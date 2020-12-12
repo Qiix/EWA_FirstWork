@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="208.0" prefWidth="400.0" style="-fx-background-color: #D8DCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.SuppouvController">
+   <children>
+      <TextField fx:id="isbn" layoutX="116.0" layoutY="89.0" />
+      <Button layoutX="155.0" layoutY="152.0" mnemonicParsing="false" onAction="#supprimerOuvrage" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #25c5b3;" text="DELETE" textFill="WHITE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Label layoutX="50.0" layoutY="93.0" text="ISBN" />
+      <Text layoutX="123.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUPPRIMER OUVRAGE" wrappingWidth="253.70703125" />
+   </children>
+</AnchorPane>

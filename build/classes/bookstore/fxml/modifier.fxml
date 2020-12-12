@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D8DCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.ModifierController">
+   <children>
+      <Label layoutX="68.0" layoutY="74.0" text="ISBN" />
+      <Label layoutX="68.0" layoutY="120.0" text="INTITULE" />
+      <Label layoutX="68.0" layoutY="162.0" text="PRIX" />
+      <Label layoutX="68.0" layoutY="211.0" text="QUANTITE" />
+      <Button layoutX="255.0" layoutY="297.0" mnemonicParsing="false" onAction="#modifierOuvrage" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #25c5b3;" text="EDIT" textFill="WHITE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="isbn" layoutX="207.0" layoutY="70.0" />
+      <TextField fx:id="intitule" layoutX="207.0" layoutY="116.0" />
+      <TextField fx:id="prix" layoutX="207.0" layoutY="167.0" />
+      <TextField fx:id="quantite" layoutX="207.0" layoutY="216.0" />
+   </children>
+</AnchorPane>

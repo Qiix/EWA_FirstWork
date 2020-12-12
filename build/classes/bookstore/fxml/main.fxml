@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="456.0" prefWidth="629.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="329.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <TabPane prefHeight="341.0" prefWidth="544.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="SEARCH">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C3E1DD;">
+                           <children>
+                              <VBox layoutX="56.0" layoutY="58.0" prefHeight="297.0" prefWidth="542.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="58.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="440.0" style="-fx-background-color: #e7e7e7;">
+                                       <children>
+                                          <JFXTextField fx:id="title" onAction="#loadviewbtitle" promptText="TITLE" unFocusColor="#25c5b3" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="521.0">
+                                       <children>
+                                          <JFXTextField fx:id="author" onAction="#loadviewauth" promptText="AUTHOR" unFocusColor="#25c5b3" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="110.0" prefHeight="61.0" prefWidth="500.0" style="-fx-background-color: #e7e7e7;">
+                                       <children>
+                                          <JFXTextField fx:id="date" onAction="#loadtviewdate" promptText="RELEASE DATE" unFocusColor="#25c5b3" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="133.0" prefHeight="61.0" prefWidth="500.0">
+                                       <children>
+                                          <JFXTextField fx:id="category" onAction="#loadviewcat" promptText="CATEGORY" unFocusColor="#25c5b3" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="194.0" prefHeight="61.0" prefWidth="500.0" style="-fx-background-color: #e7e7e7;">
+                                       <children>
+                                          <JFXTextField fx:id="isbn" onAction="#loadviewisbn" promptText="ISBN" style="-fx-background-color: #e7e7e7;" unFocusColor="#25c5b3" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="VIEW ALL BOOKS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #D8DCDC;">
+                           <children>
+                              <TableView fx:id="table" layoutX="-4.0" prefHeight="318.0" prefWidth="692.0">
+                                <columns>
+                                  <TableColumn fx:id="idouvrage" prefWidth="81.0" text="ID OUVRAGE" />
+                                  <TableColumn fx:id="isbnn" text="ISBN" />
+                                    <TableColumn fx:id="intitule" prefWidth="89.0" text="INTITULE" />
+                                    <TableColumn fx:id="dates" prefWidth="94.0" text="DATE SORTIE" />
+                                    <TableColumn fx:id="quantite" prefWidth="88.0" text="QUANTITE" />
+                                    <TableColumn fx:id="prix" prefWidth="73.0" text="PRIX" />
+                                    <TableColumn fx:id="auteur" prefWidth="78.0" text="AUTEUR" />
+                                    <TableColumn fx:id="categorie" prefWidth="107.0" text="CATEGORIE" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="284.0" layoutY="334.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="143.0" style="-fx-background-color: #40A497;" text="AJOUTER AU PANIER">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect></Button>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

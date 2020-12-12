@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.TableAffichageController">
+   <children>
+      <TableView fx:id="tableouvvrage" prefHeight="376.0" prefWidth="757.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="idOuvrage" prefWidth="104.0" text="ID OUVRAGE" />
+          <TableColumn fx:id="isbn" prefWidth="65.0" text="ISBN" />
+            <TableColumn fx:id="intitule" minWidth="0.0" prefWidth="148.0" text="INTITULE" />
+            <TableColumn fx:id="datesortie" prefWidth="93.0" text="DATE SORTIE" />
+            <TableColumn fx:id="quantite" prefWidth="91.0" text="QUANTITE" />
+            <TableColumn fx:id="prix" prefWidth="59.0" text="PRIX" />
+            <TableColumn fx:id="auteur" prefWidth="89.0" text="AUTEUR" />
+            <TableColumn fx:id="categorie" prefWidth="107.0" text="CATEGORIE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

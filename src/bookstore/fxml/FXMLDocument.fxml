@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="423.0" style="-fx-background-color: #D8DCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.FXMLDocumentController">
+   <children>
+      <TextField fx:id="inrecherche" layoutX="131.0" layoutY="56.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="27.0" layoutY="60.0" text="ISBN" />
+      <Button fx:id="chercherouvrage" layoutX="321.0" layoutY="56.0" mnemonicParsing="false" onAction="#loadchercherouvrage" style="-fx-background-color: #25c5b3;" text="search" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <Lighting>
+               <light>
+                  <Light.Distant />
+               </light>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect></Button>
+      <Label layoutX="27.0" layoutY="427.0" text="CATEGORIE" />
+      <ChoiceBox fx:id="listcategorie" layoutX="129.0" layoutY="423.0" prefHeight="25.0" prefWidth="167.0" />
+      <ValidationFacade layoutX="54.0" layoutY="496.0" prefHeight="17.0" prefWidth="122.0" />
+      <JFXTextField fx:id="idouv" focusColor="#034038" labelFloat="true" layoutX="112.0" layoutY="102.0" prefHeight="25.0" prefWidth="202.0" promptText="ID OUVRAGE" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="prix" labelFloat="true" layoutX="112.0" layoutY="336.0" prefHeight="25.0" prefWidth="209.0" promptText="PRIX" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="intitule" labelFloat="true" layoutX="113.0" layoutY="204.0" prefHeight="25.0" prefWidth="202.0" promptText="INTITULE" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="date" focusColor="#034038" labelFloat="true" layoutX="112.0" layoutY="253.0" prefHeight="25.0" prefWidth="202.0" promptText="DATE SORTIE" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="quantite" labelFloat="true" layoutX="113.0" layoutY="293.0" prefHeight="25.0" prefWidth="209.0" promptText="QUANTITE" unFocusColor="#25c5b3" />
+      <JFXTextField fx:id="isbn" labelFloat="true" layoutX="113.0" layoutY="153.0" prefHeight="25.0" prefWidth="202.0" promptText="ISBN" unFocusColor="#25c5b3" />
+      <Button layoutX="151.0" layoutY="471.0" mnemonicParsing="false" onAction="#ajouterOuvrage" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #25c5b3;" text="ADD" textFill="WHITE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="listauteur" layoutX="129.0" layoutY="383.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label layoutX="26.0" layoutY="387.0" prefHeight="17.0" prefWidth="62.0" text="AUTEUR" />
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" top="20.0" />
+   </padding>
+</AnchorPane>

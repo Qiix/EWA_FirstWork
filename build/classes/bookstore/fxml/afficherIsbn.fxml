@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="644.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bookstore.controllers.AfficherIsbnController">
+   <children>
+      <TableView fx:id="table" prefHeight="400.0" prefWidth="661.0">
+        <columns>
+          <TableColumn fx:id="idouvrage" prefWidth="101.0" text="ID OUVRAGE" />
+          <TableColumn fx:id="isbn" prefWidth="70.0" text="ISBN" />
+            <TableColumn fx:id="intitule" prefWidth="78.0" text="INTITULE" />
+            <TableColumn fx:id="date" prefWidth="83.0" text="DATE SORTIE" />
+            <TableColumn fx:id="quantite" prefWidth="83.0" text="QUANTITE" />
+            <TableColumn fx:id="prix" prefWidth="63.0" text="PRIX" />
+            <TableColumn fx:id="auteur" prefWidth="69.0" text="AUTEUR" />
+            <TableColumn fx:id="categorie" prefWidth="96.0" text="CATEGORIE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
