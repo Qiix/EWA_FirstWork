@@ -7,8 +7,8 @@
 
 <AnchorPane prefHeight="326.0" prefWidth="595.0" style="-fx-background-color: #bce6eb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.controllers.PopupController">
    <children>
-      <TextField  fx:id="poplast" layoutX="238.0" layoutY="82.0" />
-      <TextField  fx:id="popfirst" layoutX="238.0" layoutY="158.0" />
+      <TextField fx:id="poplast" layoutX="238.0" layoutY="82.0" />
+      <TextField fx:id="popfirst" layoutX="238.0" layoutY="158.0" />
       <TextField fx:id="popbic" layoutX="238.0" layoutY="230.0" />
       <Button fx:id="cancel" layoutX="347.0" layoutY="287.0" onAction="#cancel" text="Cancel" />
       <Button fx:id="update" layoutX="212.0" layoutY="287.0" onAction="#Update" text="Update" />
