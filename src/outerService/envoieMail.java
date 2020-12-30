@@ -23,7 +23,7 @@ public class envoieMail {
          properties.put("mail.smtp.host", "smtp.gmail.com");
          properties.put("mail.smtp.port", "587");
          String myaccountemail = "gritliyousra@gmail.com";
-         String password = "faridA123";
+         String password = "******";
          Session session = Session.getDefaultInstance(properties, new Authenticator(){
 
             @Override

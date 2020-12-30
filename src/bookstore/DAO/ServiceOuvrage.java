@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import bookstore.Utility.Myconnection;
+import javafx.scene.control.Alert;
 
 
 public class ServiceOuvrage implements InterfaceOuvrage {
@@ -107,12 +108,14 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             String req1= "select * from ouvrage where isbn ="+Integer.toString(isbn);
             Statement s= cnx.getConnection().createStatement();
             ResultSet rs = s.executeQuery(req1);
+            if (rs.next() == false) { System.out.println("ResultSet in empty in Java"); }
+            else {
             while(rs.next())
             {
                 System.out.println("ISBN "+rs.getInt("ISBN") +"\n  INTITULE  " + rs.getString ("INTITULE")+"\n date de sortie "+rs.getString("datesortie")+"\n quantite "+rs.getInt("quantite")+" \n prix "+rs.getFloat("prix") );
              exist = true;
                 System.out.println(exist);
-            }}
+            }}}
         catch (SQLException ex) {
             System.out.println(ex);
         }
@@ -162,6 +165,15 @@ public class ServiceOuvrage implements InterfaceOuvrage {
            
             Statement ss= cnx.getConnection().createStatement();
             ResultSet rs = ss.executeQuery(req1);
+                  if (rs.next() == false) {
+            System.out.println("ResultSet in empty in Java");
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("alerte");
+            alert.setHeaderText(null);
+            alert.setContentText("Pas d'ouvrages disponibles ayant ce titre");
+            alert.showAndWait();
+            
+             }
             while(rs.next())
             {
                 //System.out.println("fi service "+s);
@@ -196,7 +208,15 @@ public class ServiceOuvrage implements InterfaceOuvrage {
            
             Statement ss= cnx.getConnection().createStatement();
             ResultSet rs = ss.executeQuery(req1);
-            while(rs.next())
+                  if (rs.next() == false) {
+            System.out.println("ResultSet in empty in Java");
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("alerte");
+            alert.setHeaderText(null);
+            alert.setContentText("Pas d'ouvrages disponibles pour cet auteur");
+            alert.showAndWait();
+            
+             } else
             {
                 //System.out.println("fi service "+s);
           System.out.println(" fi service  ISBN "+rs.getInt("isbn") +" INTITULE " + rs.getString ("intitule")+" DATE "+rs.getString("datesortie")
@@ -231,12 +251,20 @@ public class ServiceOuvrage implements InterfaceOuvrage {
            
             Statement ss= cnx.getConnection().createStatement();
             ResultSet rs = ss.executeQuery(req1);
+            if (rs.next() == false) {
+            System.out.println("ResultSet in empty in Java");
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("alerte");
+            alert.setHeaderText(null);
+            alert.setContentText("Pas d'ouvrages disponibles ayant cet ISBN");
+            alert.showAndWait();
+            
+             }
+            if (rs.next() == true) {
             while(rs.next())
             {
-                //System.out.println("fi service "+s);
           System.out.println(" fi service  ISBN "+rs.getInt("isbn") +" INTITULE " + rs.getString ("intitule")+" DATE "+rs.getString("datesortie")
           + "QUANTITE "+ rs.getInt("quantite")+"PRIX"+rs.getString("auteur")+"auteur"+rs.getString("categorie")+"categorie");
-         //System.out.println("INTITULE "+rs.getInt("INTITULE")); 
                 Ouvrage o = new Ouvrage();
                 o.setIdOuvrage(rs.getInt("idOuvrage"));
                 o.setIsbn(rs.getInt("isbn"));
@@ -248,7 +276,7 @@ public class ServiceOuvrage implements InterfaceOuvrage {
                 o.setCategorie(rs.getString("categorie"));
                 l.add(o);
                 
-            }
+            }}
         } catch (SQLException ex) {
             System.out.println("erreur affichage ");
         }
@@ -267,6 +295,15 @@ public class ServiceOuvrage implements InterfaceOuvrage {
            
             Statement ss= cnx.getConnection().createStatement();
             ResultSet rs = ss.executeQuery(req1);
+                  if (rs.next() == false) {
+            System.out.println("ResultSet in empty in Java");
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("alerte");
+            alert.setHeaderText(null);
+            alert.setContentText("Pas d'ouvrages disponibles ayant cette  date de sortie");
+            alert.showAndWait();
+            
+             }
             while(rs.next())
             {
                 //System.out.println("fi service "+s);
@@ -301,6 +338,15 @@ public class ServiceOuvrage implements InterfaceOuvrage {
             String req1= "select * from ouvrage where categorie='"+s+"'";
             Statement ss= cnx.getConnection().createStatement();
             ResultSet rs = ss.executeQuery(req1);
+                  if (rs.next() == false) {
+            System.out.println("ResultSet in empty in Java");
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("alerte");
+            alert.setHeaderText(null);
+            alert.setContentText("Pas d'ouvrages disponibles ayant cette categorie");
+            alert.showAndWait();
+            
+             }
             while(rs.next())
             {
                 //System.out.println("fi service "+s);

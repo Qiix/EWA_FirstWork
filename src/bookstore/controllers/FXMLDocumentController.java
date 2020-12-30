@@ -71,14 +71,7 @@ public class FXMLDocumentController implements Initializable {
             listauteur.setValue(lii.get(1));
             listauteur.setItems(autliste);
         }
-        /* for (String li1 : lii) {
-             listauteur.setValue(li1);
-             listauteur.setItems(autliste);
-         }*/
-        
-       
-        
-        
+
         listcategorie.setValue("neuf");
         listcategorie.setItems(categliste); 
       
